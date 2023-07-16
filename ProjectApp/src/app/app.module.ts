@@ -12,6 +12,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './components/home/home.component';
 import { UserlistComponent } from './components/userlist/userlist.component';
 import { UpdatepopupComponent } from './components/updatepopup/updatepopup.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UpdatepopupComponent } from './components/updatepopup/updatepopup.compo
     HomeComponent,
     UserlistComponent,
     UpdatepopupComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
