@@ -1,0 +1,50 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "vasanth",
+      "password": "Vachu@232001",
+      "email": "vasanth@admin.com",
+      "gender": "male",
+      "isActive": true,
+      "role": "admin"
+    },
+    {
+      "id": "user1",
+      "name": "vasanth",
+      "password": "Vachu@232001",
+      "email": "vasanth@admin.com",
+      "gender": "male",
+      "isActive": true,
+      "role": "staff"
+    },
+    {
+      "id": "staff",
+      "name": "Hall Howell",
+      "password": "Vachu@232001",
+      "email": "hecaf@mailinator.com",
+      "gender": "male",
+      "isActive": true,
+      "role": "staff"
+    },
+    {
+      "id": "staff1",
+      "name": "Clarke Pickett",
+      "password": "Vachu@232001",
+      "email": "wyvilu@mailinator.com",
+      "gender": "male",
+      "isActive": true,
+      "role": "staff"
+    }
+  ],
+  "role": [
+    {
+      "code": "staff",
+      "role": "Staff"
+    },
+    {
+      "code": "quality",
+      "role": "Quality"
+    }
+  ]
+}

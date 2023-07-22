@@ -1,4 +1,5 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="isNavbar"></app-navbar>
+
 <div class="py-5 container">
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>

@@ -1,0 +1,14 @@
+.card {
+    width: 60%;
+    margin: auto;
+    padding: 20px 30px;
+    background-color: whitesmoke;
+}
+
+.example-form {
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}

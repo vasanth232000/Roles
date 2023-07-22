@@ -10,8 +10,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-
-constructor(public builder : FormBuilder,public notfy : ToastrService,public service:AuthService,public router:Router){}
+userData:any;
+constructor(public builder : FormBuilder,public notfy : ToastrService,public service:AuthService,public router:Router){
+  this.checkUserExist();
+}
 
 register=this.builder.group({
   id:this.builder.control('',Validators.compose([Validators.required,Validators.minLength(5)])),
@@ -23,12 +25,23 @@ register=this.builder.group({
   role:this.builder.control('')
 })
 
+checkUserExist(){
+ this.service.getAll().subscribe((res)=>{
+  this.userData = res;
+ })
+}
+
 proceedRegister(){
   if(this.register.valid){
-    console.log('reg',this.register.value);
-    this.service.proceedRegister(this.register.value).subscribe(result=>{
+    this.userData.map((item:any)=>{
+      if(item.id === this.register.value.id){
+        this.notfy.error('user already exists');
+      }else{
+      this.service.proceedRegister(this.register.value).subscribe(result=>{
       this.notfy.success('Please contact admin for enable access','Registered Successfully');
       this.router.navigate(['login']);
+    })
+      }
     })
   }else{
     this.notfy.warning('Please enter valid data');

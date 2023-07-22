@@ -10,6 +10,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [],
   exports: [
@@ -22,7 +24,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatTableModule,
     MatSortModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatPaginatorModule,
+    MatIconModule
   ],
   imports: [
     CommonModule
